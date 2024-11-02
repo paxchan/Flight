@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Search</h1>
+        <form id="flight-search-form">
+            <div class="form-group">
+                <label for="departure-date">Departure Date:</label>
+                <input type="date" id="departure-date" name="departure-date" required>
+            </div>
+            <div class="form-group">
+                <label for="departure-city">Departure City:</label>
+                <input list="departure-city-options" id="departure-city" name="departure-city" required>
+                <datalist id="departure-city-options">
+                    <!-- Options will be populated dynamically using JavaScript -->
+                </datalist>
+            </div>
+            <div class="form-group">
+                <label for="arrival-city">Arrival City:</label>
+                <input list="arrival-city-options" id="arrival-city" name="arrival-city" required>
+                <datalist id="arrival-city-options">
+                    <!-- Options will be populated dynamically using JavaScript -->
+                </datalist>
+            </div>
+            <div class="form-group">
+                <button type="button" id="search-flights-button">Search Flights</button>
+            </div>
+        </form>
+        <div id="flight-results">
+            <table id="flight-results-table" class="flight-table">
+                <thead>
+                    <tr>
+                        <th>Flight ID</th>
+                        <th>Airline</th>
+                        <th>Departure Airport</th>
+                        <th>Arrival Airport</th>                        
+                        <th>Layover Airport</th>
+                        <th>Layover Duration</th>
+                        <th>Second Flight Departure Time</th>
+                        <th>Total Flight Duration</th>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                        <th>Cost</th>
+                    </tr>
+                </thead>
+                <tbody id="flight-results-body">
+                    <!-- Flight results will be populated dynamically using JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="flightsFrontend2.js"></script>
+</body>
+</html>

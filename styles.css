@@ -1,0 +1,133 @@
+/* General styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for the flight search form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input[type="date"],
+input[list] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+input[type="date"]:focus,
+input[list]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 400px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for flight results */
+#flight-results {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.flight-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+.flight-table th, .flight-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+    font-size: 0.75rem;
+}
+
+.flight-table th {
+    background-color: #007bff;
+    color: #fff;
+    white-space: normal;
+    word-break: break-word;
+    font-size: 0.75rem;
+}
+
+.flight-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 480px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    .flight-table th, .flight-table td {
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+}
